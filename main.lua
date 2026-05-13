@@ -13,6 +13,8 @@ function _update()
   end
 end
 
+background_text = "move: ⬅️➡️\njump: 🅾️\naxe: ❎\nrotate axe: ⬅️➡️"
+
 function _draw()
   cls()
   apply_camera_shake() -- sets camera offsets

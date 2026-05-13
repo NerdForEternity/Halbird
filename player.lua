@@ -1,9 +1,9 @@
 function make_player()
 	p={}
-	p.x=64  --position
-	p.y=64
-	p.dx=0 --velocity
-	p.dy=0
+	p.x = 64 
+    p.y = 64  --position
+	p.dx=0
+    p.dy=0  --velocity
 	p.sp=1 --sprite id
 	p.flp=false --horizontal flip
 	
@@ -15,17 +15,16 @@ function make_player()
 	
 	-- weapon variables
 	p.wx=0
-	p.wy=0
+    p.wy=0 -- weapon position
     p.w_angle = 0    -- rotation in "turns" (0 to 1)
     p.w_av = 0 -- angular velocity
-    p.w_dist = 10    -- how far the weapon is from the player center
-    p.w_sp = 16       -- the sprite id for your weapon
+    p.w_dist = 10  -- how far the weapon is from the player center
+    p.w_sp = 16    -- the sprite id for your weapon
 	
 	-- heavy physics
 	p.w_acc = 0.005 -- weapon acceleration
 	p.w_fric = 0.94 -- air resistance
-	
-	
+    
 	p.state="move" --player state
 end
 
@@ -49,9 +48,9 @@ function draw_player_state()
             rspr(p.w_sp, p.wx, p.wy, p.w_angle)    end
 
             -- debug: draw the hook point so you can see it
-             local h_off_x = -3  * cos(p.w_angle) - 3 * sin(p.w_angle)
-             local h_off_y = -3 * sin(p.w_angle) + 3 * cos(p.w_angle)
-             pset(p.wx + h_off_x, p.wy + h_off_y, 8)
+            -- local h_off_x = -3  * cos(p.w_angle) - 3 * sin(p.w_angle)
+            -- local h_off_y = -3 * sin(p.w_angle) + 3 * cos(p.w_angle)
+            -- pset(p.wx + h_off_x, p.wy + h_off_y, 8)
  	end
 end
 
